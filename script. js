@@ -1,0 +1,19 @@
+function addTask() {
+  const input = document.getElementById("taskInput");
+  const task = input.value.trim();
+  if (task === "") return;
+
+  const list = document.getElementById("taskList");
+  const item = document.createElement("li");
+
+  item.textContent = task;
+  item.onclick = () => item.classList.toggle("completed");
+
+  const delBtn = document.createElement("button");
+  delBtn.textContent = "❌";
+  delBtn.onclick = () => item.remove();
+  item.appendChild(delBtn);
+
+  list.appendChild(item);
+  input.value = "";
+}
