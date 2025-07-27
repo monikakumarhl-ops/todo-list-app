@@ -16,4 +16,4 @@ function addTask() {
 
   list.appendChild(item);
   input.value = "";
-}
+} 
